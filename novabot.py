@@ -29,12 +29,11 @@ listener = sr.Recognizer()                 # Speech recognition
 # Check USB port , connect adruino board to correct COM port to connect to physical body
 try:
     port = serial.Serial("COM5",9600)
-    print("Phycial body, connected.")
+    print("Phycial Body Status: Connected.")
 except:
-    print("Unable to connect to my physical body")
+    print("Physical Body Status: Disconnected")
 
 def listen():
-	""" listen to what user says"""
 	try:
 		with sr.Microphone() as source:                         # Microphone Access
 			print("<<=TALK=>>")
