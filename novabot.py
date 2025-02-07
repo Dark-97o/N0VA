@@ -106,9 +106,9 @@ def process(words):
 		port.write(b'u')
 		talk(random.choice(jokes))
   
-	# elif word_list[0] == 'love':
-	# 	talk('I cant process love, but i do love you , sparkle')
-	# 	port.write(b'l')
+	elif word_list[0] == 'love':
+		talk('I cant process love, but i do love you , sparkle')
+		port.write(b'l')
   
 	elif word_list[0] == 'exercise':
 		port.write(b'w')
@@ -128,7 +128,7 @@ def process(words):
 		"""if command for opening URLs"""
 		port.write(b'l')
 		talk("Opening, sir")
-		url = f"http://{''.join(word_list[1:])}"   # URL
+		url = f"http://{''.join(word_list[1:])}"
 		webbrowser.open(url)
 		return
 	elif word_list[0] == 'uppercut':
