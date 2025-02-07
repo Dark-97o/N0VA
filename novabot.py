@@ -29,7 +29,7 @@ listener = sr.Recognizer()                 # Speech recognition
 # Check USB port , connect adruino board to correct COM port to connect to physical body
 try:
     port = serial.Serial("COM5",9600)
-    print("Phycial Body Status: Connected.")
+    print("Phycial Body Status: Connected")
 except:
     print("Physical Body Status: Disconnected")
 
