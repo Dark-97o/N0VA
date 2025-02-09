@@ -19,7 +19,7 @@ bye_words = ['bye bye', 'bye see you soon', 'sayonara', 'alvida']
 r_u_there = ['are you there', 'you there']
 jokes = ['What do kids play when their mom is using the phone? Bored games','Why are snails slow? Because they are carrying a house on their back','What’s the smartest insect? A spelling bee!','What does a storm cloud wear under his raincoat? Thunderwear','What is fast, loud and crunchy? A rocket chip','How does the ocean say hi? It waves!','What do you call a couple of chimpanzees sharing an Amazon account? PRIME-mates','Why did the teddy bear say no to dessert? Because she was stuffed']
 
-#  Intialiing the Imported Libraries
+#  Intializing the Imported Libraries
 engine = pyttsx3.init()                    # Text to speech engine
 voices = engine.getProperty('voices')      # Check library for voices
 engine.setProperty('voice', voices[1].id)  # 0-Male\1-Female
@@ -39,7 +39,7 @@ def listen():
 			print("<<=TALK=>>")
 			voice = listener.listen(source)                     # Microphone Listener
 			command = listener.recognize_google(voice).lower()  # Google API
-			#command = command.lower()                          
+			command = command.lower()                          
 			print(command)
 
 			if (command.split(' ')[0] == robot_name):
