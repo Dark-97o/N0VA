@@ -80,7 +80,7 @@ def process(words):
 		port.write(b'u')
 		port.write(b'i')
 		talk("Messaging emergency contacts about your situation")
-		pywhatkit.sendwhatmsg_instantly("+917004708062", "This is an automated message by Nova,Subhranil has requested emergency help as soon as possible", 15, True, 4)
+		pywhatkit.sendwhatmsg_instantly("+91234567890", "This is an automated message by Nova,Subhranil has requested emergency help as soon as possible", 15, True, 4)
 
 	# elif word_list[0] == 'details':
 	# 	port.write(b'u')
