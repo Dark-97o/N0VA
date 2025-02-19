@@ -72,9 +72,9 @@ def process(words):
 		pywhatkit.search(extension)
 		return
 
-	elif word_list[0] == 'dance':
-		port.write(b'd')
-		talk("Under the sky so wide and free, We chase the dreams we're meant to be. Through every storm and every mile, We carry hope with every smile. Together we rise, you and me!")
+	# elif word_list[0] == 'dance':
+	# 	port.write(b'd')
+	# 	talk("Under the sky so wide and free, We chase the dreams we're meant to be. Through every storm and every mile, We carry hope with every smile. Together we rise, you and me!")
 
 	elif word_list[0] == 'help':
 		port.write(b'u')
@@ -82,17 +82,17 @@ def process(words):
 		talk("Messaging emergency contacts about your situation")
 		pywhatkit.sendwhatmsg_instantly("+917004708062", "This is an automated message by Nova,Subhranil has requested emergency help as soon as possible", 15, True, 4)
 
-	elif word_list[0] == 'details':
-		port.write(b'u')
-		port.write(b'i')
-		port.write(b'i')
-		talk("Hello I'm Nova, your energetic and helpful companion, designed by the brilliant minds of Team Sankalp! Im just 1 day old, but dont let my age fool you, i have got all the skills to keep things exciting and fun")
-		port.write(b'i')
-		port.write(b'u')
-		port.write(b'i')
-		port.write(b'h')
-		port.write(b'l')
-		talk("Here is what i can do. Say a friendly hi and wave you off with a bye. Help you out with searches when you're curious. Crack jokes that will make you giggle. Play some tunes to brighten your day. Open up applications and assist with tasks. Oh, and if you are looking for action, I can punch, smash, and throw an uppercut. You think i m not energetic enough, i can even do exercise. ")
+	# elif word_list[0] == 'details':
+	# 	port.write(b'u')
+	# 	port.write(b'i')
+	# 	port.write(b'i')
+	# 	talk("Hello I'm Nova, your energetic and helpful companion, designed by the brilliant minds of Team Sankalp! Im just 1 day old, but dont let my age fool you, i have got all the skills to keep things exciting and fun")
+	# 	port.write(b'i')
+	# 	port.write(b'u')
+	# 	port.write(b'i')
+	# 	port.write(b'h')
+	# 	port.write(b'l')
+	# 	talk("Here is what i can do. Say a friendly hi and wave you off with a bye. Help you out with searches when you're curious. Crack jokes that will make you giggle. Play some tunes to brighten your day. Open up applications and assist with tasks. Oh, and if you are looking for action, I can punch, smash, and throw an uppercut. You think i m not energetic enough, i can even do exercise. ")
 
 	if word_list[0] == 'introduce':
 		port.write(b'l')
@@ -105,9 +105,9 @@ def process(words):
 		port.write(b'u')
 		talk(random.choice(jokes))
   
-	elif word_list[0] == 'love':
-		talk('I cant process love, but i do love you , sparkle')
-		port.write(b'l')
+	# elif word_list[0] == 'love':
+	# 	talk('I cant process love, but i do love you , sparkle')
+	# 	port.write(b'l')
   
 	elif word_list[0] == 'exercise':
 		port.write(b'w')
