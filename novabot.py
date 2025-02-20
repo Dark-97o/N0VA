@@ -1,8 +1,7 @@
 #  PROJECT NOVA 2024, University of Engineeering and Management, Jaipur
 #  Department of Computer Science and Engineering , Artifical Intelligence and Machine Learning , Batch 2023-2027 
 #  Made By Subhranil Baul - Assisted by Abhishek Kumar , Manas Shit
-
-
+# editable link: https://prod.liveshare.vsengsaas.visualstudio.com/join?70F345567DC0DBE79AC4724D7594D1E7390C
 import speech_recognition as sr   # voice recognition library
 import random                     # to choose random words from list
 import pyttsx3                    # offline Text to Speech
@@ -14,16 +13,16 @@ robot_name = 'nova'
 
 hi_words_u = ['hi', 'hello', 'namaskar']
 bye_words_u = ['bye', 'tata', 'alvida']
-hi_words = ['hi there', 'hello there', 'whats up boss', 'namaskar']
-bye_words = ['bye bye', 'bye see you soon', 'sayonara', 'alvida']
+hi_words = ['hi there', 'hello there', 'whats up boss']
+bye_words = ['bye bye', 'cya' , 'sayonara']
 r_u_there = ['are you there', 'you there']
 jokes = ['What do kids play when their mom is using the phone? Bored games','Why are snails slow? Because they are carrying a house on their back','What’s the smartest insect? A spelling bee!','What does a storm cloud wear under his raincoat? Thunderwear','What is fast, loud and crunchy? A rocket chip','How does the ocean say hi? It waves!','What do you call a couple of chimpanzees sharing an Amazon account? PRIME-mates','Why did the teddy bear say no to dessert? Because she was stuffed']
 
 #  Intializing the Imported Libraries
 engine = pyttsx3.init()                    # Text to speech engine
 voices = engine.getProperty('voices')      # Check library for voices
-engine.setProperty('voice', voices[1].id)  # 0-Male\1-Female
-engine.setProperty('rate', 170)            # Voice rate 
+engine.setProperty('voice', voices[0].id)  # 0-Male\1-Female
+engine.setProperty('rate', 150)            # Voice rate 
 listener = sr.Recognizer()                 # Speech recognition
 
 # Check USB port , connect adruino board to correct COM port to connect to physical body
@@ -97,7 +96,7 @@ def process(words):
 	if word_list[0] == 'introduce':
 		port.write(b'l')
 		port.write(b'h')
-		talk("Hello, I am Nova your personal companion, here to assist you on your desktop adventures")
+		talk("Hello, I am Nova your personal companion bot, Here to assist you with your daily desktop duties")
 
 	elif word_list[0] == 'joke':
 		port.write(b'h')
