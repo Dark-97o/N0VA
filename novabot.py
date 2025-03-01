@@ -2,6 +2,7 @@
 #  Department of Computer Science and Engineering , Artifical Intelligence and Machine Learning , Batch 2023-2027 
 #  Made By Subhranil Baul - Assisted by Abhishek Kumar , Manas Shit
 # editable link: https://prod.liveshare.vsengsaas.visualstudio.com/join?70F345567DC0DBE79AC4724D7594D1E7390C
+
 import speech_recognition as sr   # voice recognition library
 import random                     # to choose random words from list
 import pyttsx3                    # offline Text to Speech
@@ -140,18 +141,15 @@ def process(words):
 
 	for word in word_list:
 		if word in hi_words_u:
-			""" if user says hi/hello greet him accordingly"""
-			port.write(b'h')               
+			port.write(b'h')
 			talk(random.choice(hi_words))
 
 		elif word in bye_words_u:
-			""" if user says bye etc"""
 			talk(random.choice(bye_words))
 			port.write(b'h')
 
 
 def talk(sentence):
-	""" talk / respond to the user """
 	engine.say(sentence)
 	engine.runAndWait()
 
