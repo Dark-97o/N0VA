@@ -9,7 +9,6 @@ Servo r_hand;
 byte val = "";
 
 void setup() {
-  // put your setup code here, to run once:
   r_hand.attach(2);
   l_hand.attach(3);
   head.attach(4);
@@ -18,7 +17,6 @@ void setup() {
 }
 
 void standby(){
-  // all motors to these positions
   head.write(90);
   int r_pos = 30;
   int l_pos = map(r_pos, 0, 180, 180, 0);
@@ -28,7 +26,6 @@ void standby(){
 }
 
 void hi(){
-  // all motors to these positions
   head.write(90);
 
   int i = 0;
